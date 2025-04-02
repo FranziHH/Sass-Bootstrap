@@ -5,48 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webformular mit Tabs</title>
     <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/customStyle.css">
 </head>
 <body>
-<div class="container mt-5">
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="category1-tab" data-bs-toggle="tab" data-bs-target="#category1" type="button" role="tab" aria-controls="category1" aria-selected="true">Kategorie 1</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="category2-tab" data-bs-toggle="tab" data-bs-target="#category2" type="button" role="tab" aria-controls="category2" aria-selected="false">Kategorie 2</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="category3-tab" data-bs-toggle="tab" data-bs-target="#category3" type="button" role="tab" aria-controls="category3" aria-selected="false">Kategorie 3</button>
-        </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="category1" role="tabpanel" aria-labelledby="category1-tab">
-            <form class="mt-3">
-                <div class="mb-3"><label for="input01" class="form-label">Feld 1</label><input type="text" class="form-control" id="input01" name="input01"></div>
-                <div class="mb-3"><label for="input02" class="form-label">Feld 2</label><input type="text" class="form-control" id="input02" name="input02"></div>
-                <div class="mb-3"><label for="input03" class="form-label">Feld 3</label><input type="text" class="form-control" id="input03" name="input03"></div>
-                <div class="mb-3"><label for="input04" class="form-label">Feld 4</label><input type="text" class="form-control" id="input04" name="input04"></div>
-                <div class="mb-3"><label for="input05" class="form-label">Feld 5</label><input type="text" class="form-control" id="input05" name="input05"></div>
-            </form>
-        </div>
-        <div class="tab-pane fade" id="category2" role="tabpanel" aria-labelledby="category2-tab">
-            <form class="mt-3">
-                <div class="mb-3"><label for="input11" class="form-label">Feld 11</label><input type="text" class="form-control" id="input11" name="input11"></div>
-                <div class="mb-3"><label for="input12" class="form-label">Feld 12</label><input type="text" class="form-control" id="input12" name="input12"></div>
-                <div class="mb-3"><label for="input13" class="form-label">Feld 13</label><input type="text" class="form-control" id="input13" name="input13"></div>
-                <div class="mb-3"><label for="input14" class="form-label">Feld 14</label><input type="text" class="form-control" id="input14" name="input14"></div>
-                <div class="mb-3"><label for="input15" class="form-label">Feld 15</label><input type="text" class="form-control" id="input15" name="input15"></div>
-            </form>
-        </div>
-        <div class="tab-pane fade" id="category3" role="tabpanel" aria-labelledby="category3-tab">
-            <form class="mt-3">
-                <div class="mb-3"><label for="input21" class="form-label">Feld 21</label><input type="text" class="form-control" id="input21" name="input21"></div>
-                <div class="mb-3"><label for="input22" class="form-label">Feld 22</label><input type="text" class="form-control" id="input22" name="input22"></div>
-                <div class="mb-3"><label for="input23" class="form-label">Feld 23</label><input type="text" class="form-control" id="input23" name="input23"></div>
-                <div class="mb-3"><label for="input24" class="form-label">Feld 24</label><input type="text" class="form-control" id="input24" name="input24"></div>
-                <div class="mb-3"><label for="input25" class="form-label">Feld 25</label><input type="text" class="form-control" id="input25" name="input25"></div>
-            </form>
+<div class="container maincontainer min-vh-100 px-5">
+    <div class="border-bottom pt-3 mb-5"><h1>Settings</h1></div>
+    <div class="card own-card p-3">
+        <div class="container"></div>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="category1-tab" data-bs-toggle="tab" data-bs-target="#category1" type="button" role="tab" aria-controls="category1" aria-selected="true">Kategorie 1</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="category2-tab" data-bs-toggle="tab" data-bs-target="#category2" type="button" role="tab" aria-controls="category2" aria-selected="false">Kategorie 2</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="category3-tab" data-bs-toggle="tab" data-bs-target="#category3" type="button" role="tab" aria-controls="category3" aria-selected="false">Kategorie 3</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="category1" role="tabpanel" aria-labelledby="category1-tab">
+                    <form class="mt-3">
+                        <div class="mb-3">
+                            <label for="input01" class="form-label">Feld 1</label>
+                            <input type="text" class="form-control" id="input01" name="input01">
+                            <small class="form-text text-muted">Dies ist eine Beschreibung des Eingabefeldes.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="input02" class="form-label">Feld 2</label>
+                            <input type="text" class="form-control" id="input02" name="input02">
+                            <small class="form-text text-muted">Dies ist eine Beschreibung des Eingabefeldes.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="input03" class="form-label">Feld 3</label>
+                            <input type="text" class="form-control" id="input03" name="input03">
+                            <small class="form-text text-muted">Dies ist eine Beschreibung des Eingabefeldes.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="input04" class="form-label">Feld 4</label>
+                            <input type="text" class="form-control" id="input04" name="input04">
+                            <small class="form-text text-muted">Dies ist eine Beschreibung des Eingabefeldes.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="input05" class="form-label">Feld 5</label>
+                            <input type="text" class="form-control" id="input05" name="input05">
+                            <small class="form-text text-muted">Dies ist eine Beschreibung des Eingabefeldes.</small>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col"> </div>
+                            <div class="col-3 align-self-end">
+                                <button type="submit" class="btn btn-primary w-100">Speichern</button>
+                            </div>
+                            <div class="col-3 align-self-end">
+                                <button type="reset" class="btn btn-primary w-100">Zurücksetzen</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="category2" role="tabpanel" aria-labelledby="category2-tab">
+                    <form class="mt-3">
+                        <div class="mb-3">
+                            <label for="input11" class="form-label">Feld 11</label>
+                            <input type="text" class="form-control" id="input11" name="input11">
+                            <small class="form-text text-muted">Dies ist eine Beschreibung des Eingabefeldes.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="input12" class="form-label">Feld 12</label>
+                            <input type="text" class="form-control" id="input12" name="input12">
+                            <small class="form-text text-muted">Dies ist eine Beschreibung des Eingabefeldes.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="input13" class="form-label">Feld 13</label>
+                            <input type="text" class="form-control" id="input13" name="input13">
+                            <small class="form-text text-muted">Dies ist eine Beschreibung des Eingabefeldes.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="input14" class="form-label">Feld 14</label>
+                            <input type="text" class="form-control" id="input14" name="input14">
+                            <small class="form-text text-muted">Dies ist eine Beschreibung des Eingabefeldes.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="input15" class="form-label">Feld 15</label>
+                            <input type="text" class="form-control" id="input15" name="input15">
+                            <small class="form-text text-muted">Dies ist eine Beschreibung des Eingabefeldes.</small>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col"> </div>
+                            <div class="col-3 align-self-end">
+                                <button type="submit" class="btn btn-primary w-100">Speichern</button>
+                            </div>
+                            <div class="col-3 align-self-end">
+                                <button type="reset" class="btn btn-primary w-100">Zurücksetzen</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="category3" role="tabpanel" aria-labelledby="category3-tab">
+                    <form class="mt-3">
+                        <div class="mb-3">
+                            <label for="input21" class="form-label">Feld 21</label>
+                            <input type="text" class="form-control" id="input21" name="input21">
+                            <small class="form-text text-muted">Dies ist eine Beschreibung des Eingabefeldes.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="input22" class="form-label">Feld 22</label>
+                            <input type="text" class="form-control" id="input22" name="input22">
+                            <small class="form-text text-muted">Dies ist eine Beschreibung des Eingabefeldes.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="input23" class="form-label">Feld 23</label>
+                            <input type="text" class="form-control" id="input23" name="input23">
+                            <small class="form-text text-muted">Dies ist eine Beschreibung des Eingabefeldes.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="input24" class="form-label">Feld 24</label>
+                            <input type="text" class="form-control" id="input24" name="input24">
+                            <small class="form-text text-muted">Dies ist eine Beschreibung des Eingabefeldes.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="input25" class="form-label">Feld 25</label>
+                            <input type="text" class="form-control" id="input25" name="input25">
+                            <small class="form-text text-muted">Dies ist eine Beschreibung des Eingabefeldes.</small>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col"> </div>
+                            <div class="col-3 align-self-end">
+                                <button type="submit" class="btn btn-primary w-100">Speichern</button>
+                            </div>
+                            <div class="col-3 align-self-end">
+                                <button type="reset" class="btn btn-primary w-100">Zurücksetzen</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>

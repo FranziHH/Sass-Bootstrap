@@ -150,6 +150,9 @@ $table-variants: map-merge($table-variants, $custom-variants);
 // ---------- overwrite generated Colors ----------
 
 // ---------- new ThemeColor ----------
+.btn-primary, .btn-primary:hover {
+    color: #fff; 
+}
 /*
 .btn-own-primary {
     color: #fff; 
