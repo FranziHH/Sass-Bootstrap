@@ -1,2 +1,2 @@
 @echo off
-sass src/main.scss htdocs/assets/css/bootstrap.css --style compressed
+sass --no-source-map src/main.scss htdocs/assets/css/bootstrap.css --style compressed
