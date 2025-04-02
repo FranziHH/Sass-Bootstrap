@@ -1,0 +1,24 @@
+
+// https://getbootstrap.com/docs/5.3/customize/options/
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+// @import "../node_modules/bootstrap/scss/mixins";
+
+/*
+$primary: #425968;
+$secondary: #8DC63F;
+*/
+
+// variables overrides
+$btn-border-radius: 1rem;
+
+$custom-colors: (
+    "royalgreen": greenyellow
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// include Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";

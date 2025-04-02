@@ -1,0 +1,161 @@
+/*
+ * https://getbootstrap.com/docs/5.3/customize/options/
+ * https://stackoverflow.com/questions/79048994/subtle-and-emphasis-classes-on-bootstrap-5-3-new-color-theme-sass
+ */
+
+// --------------------------------------------------
+@import "../node_modules/bootstrap/scss/functions";
+// --------------------------------------------------
+
+// ---------- Change Contrast Ratio ----------
+$min-contrast-ratio: 3; // default is 4.5
+// ---------- Change Contrast Ratio ----------
+
+// ---------- overwrites ----------
+$primary: #8DC63F;
+$secondary: #425968;
+// ---------- overwrites ----------
+
+// ---------- own defined Colors ----------
+$new-tab-fg-color: #ecf3ef;
+$new-tab-bg-color: #8DC63F;
+// ---------- own defined Colors ----------
+
+// ---------- new ThemeColor ----------
+$own-primary: #e21cc1;
+$own-secondary: #dd9a0a;
+
+$own-primary-text-emphasis:   shade-color($own-primary, 60%) !default;
+$own-primary-text-emphasis-dark: tint-color($own-primary, 40%) !default;
+
+$own-primary-bg-subtle:       tint-color($own-primary, 80%) !default;
+$own-primary-bg-subtle-dark:     shade-color($own-primary, 80%) !default;
+
+$own-primary-border-subtle:   tint-color($own-primary, 60%) !default;
+$own-primary-border-subtle-dark: shade-color($own-primary, 40%) !default;
+
+
+$own-secondary-text-emphasis:   shade-color($own-secondary, 60%) !default;
+$own-secondary-text-emphasis-dark: tint-color($own-secondary, 40%) !default;
+
+$own-secondary-bg-subtle:       tint-color($own-secondary, 80%) !default;
+$own-secondary-bg-subtle-dark:     shade-color($own-secondary, 80%) !default;
+
+$own-secondary-border-subtle:   tint-color($own-secondary, 60%) !default;
+$own-secondary-border-subtle-dark: shade-color($own-secondary, 40%) !default;
+// ---------- new ThemeColor ----------
+
+
+// --------------------------------------------------
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+// --------------------------------------------------
+
+// ---------- Forms / Input Fields ----------
+$input-focus-color: $primary;
+// ---------- Forms / Input Fields ----------
+
+// ---------- Tabs ----------
+$nav-tabs-link-active-color: $new-tab-fg-color;
+$nav-tabs-link-active-bg: $new-tab-bg-color;
+// ---------- Tabs ----------
+
+
+// --------------------------------------------------
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+// --------------------------------------------------
+
+// ---------- new ThemeColor ----------
+$custom-colors: (
+    "own-primary": $own-primary,
+    "own-secondary": $own-secondary
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$custom-colors-text: (
+    "own-primary": $own-primary,
+    "own-secondary": $own-secondary
+);
+$theme-colors-text: map-merge($theme-colors-text, $custom-colors-text);
+
+$custom-colors-bg-subtle: (
+    "own-primary": $own-primary-bg-subtle,
+    "own-secondary": $own-secondary-bg-subtle
+);
+$theme-colors-bg-subtle: map-merge($theme-colors-bg-subtle, $custom-colors-bg-subtle);
+
+$custom-colors-border-subtle: (
+    "own-primary": $own-primary-border-subtle,
+    "own-secondary": $own-secondary-border-subtle
+);
+$theme-colors-border-subtle: map-merge($theme-colors-border-subtle, $custom-colors-border-subtle);
+
+$custom-colors-text-dark: (
+    "own-primary": $own-primary,
+    "own-secondary": $own-secondary
+);
+$theme-colors-text-dark: map-merge($theme-colors-text-dark, $custom-colors-text-dark);
+
+$custom-colors-bg-subtle-dark: (
+    "own-primary": $own-primary-bg-subtle-dark,
+    "own-secondary": $own-secondary-bg-subtle-dark
+);
+$theme-colors-bg-subtle-dark: map-merge($theme-colors-bg-subtle-dark, $custom-colors-bg-subtle-dark);
+
+$custom-colors-border-subtle-dark: (
+    "own-primary": $own-primary-border-subtle-dark,
+    "own-secondary": $own-secondary-border-subtle-dark
+);
+$theme-colors-border-subtle-dark: map-merge($theme-colors-border-subtle-dark, $custom-colors-border-subtle-dark);
+
+$custom-text-emphasis-colors: (
+    "own-primary-emphasis": var(--#{$prefix}own-primary-text-emphasis),
+    "own-secondary-emphasis": var(--#{$prefix}own-secondary-text-emphasis)
+);
+$utilities-text-emphasis-colors: map-merge($utilities-text-emphasis-colors, $custom-text-emphasis-colors);
+
+$custom-bg-subtle: (
+    "own-primary-subtle": var(--#{$prefix}own-primary-bg-subtle),
+    "own-secondary-subtle": var(--#{$prefix}own-secondary-bg-subtle)
+);
+$utilities-bg-subtle: map-merge($utilities-bg-subtle, $custom-bg-subtle);
+
+$custom-border-subtle: (
+    "own-primary-subtle": var(--#{$prefix}own-primary-border-subtle),
+    "own-secondary-subtle": var(--#{$prefix}own-secondary-border-subtle)
+);
+$utilities-border-subtle: map-merge($utilities-border-subtle, $custom-border-subtle);
+
+$custom-variants: (
+    "own-primary": shift-color($own-primary, $table-bg-scale),
+    "own-secondary": shift-color($own-secondary, $table-bg-scale)
+);
+$table-variants: map-merge($table-variants, $custom-variants);
+
+
+// ---------- new ThemeColor ----------
+
+// --------------------------------------------------
+@import "../node_modules/bootstrap/scss/utilities";
+// --------------------------------------------------
+
+// Something more
+
+// --------------------------------------------------
+@import "../node_modules/bootstrap/scss/bootstrap";
+// --------------------------------------------------
+
+// ---------- overwrite generated Colors ----------
+
+// ---------- new ThemeColor ----------
+/*
+.btn-own-primary {
+    color: #fff; 
+}
+
+.btn-own-secondar {
+    color: #fff; 
+}
+*/
+// ---------- new ThemeColor ----------

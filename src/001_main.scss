@@ -1,0 +1,119 @@
+/*
+ * https://getbootstrap.com/docs/5.3/customize/options/
+ * https://stackoverflow.com/questions/79048994/subtle-and-emphasis-classes-on-bootstrap-5-3-new-color-theme-sass
+ */
+
+// --------------------------------------------------
+@import "../node_modules/bootstrap/scss/functions";
+// --------------------------------------------------
+
+// ---------- Change Contrast Ratio ----------
+$min-contrast-ratio: 3; // default is 4.5
+// ---------- Change Contrast Ratio ----------
+
+// ---------- overwrites ----------
+$primary: #8DC63F;
+$secondary: #425968;
+// ---------- overwrites ----------
+
+// ---------- own defined Colors ----------
+$new-tab-fg-color: #ecf3ef;
+$new-tab-bg-color: #8DC63F;
+// ---------- own defined Colors ----------
+
+// ---------- new ThemeColor ----------
+$royalgreen: #e21cc1;
+
+$royalgreen-text-emphasis:   shade-color($royalgreen, 60%) !default;
+$royalgreen-text-emphasis-dark: tint-color($royalgreen, 40%) !default;
+
+$royalgreen-bg-subtle:       tint-color($royalgreen, 80%) !default;
+$royalgreen-bg-subtle-dark:     shade-color($royalgreen, 80%) !default;
+
+$royalgreen-border-subtle:   tint-color($royalgreen, 60%) !default;
+$royalgreen-border-subtle-dark: shade-color($royalgreen, 40%) !default;
+// ---------- new ThemeColor ----------
+
+
+// --------------------------------------------------
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+// --------------------------------------------------
+
+// ---------- Forms / Input Fields ----------
+$input-focus-color: $primary;
+// ---------- Forms / Input Fields ----------
+
+// ---------- Tabs ----------
+$nav-tabs-link-active-color: $new-tab-fg-color;
+$nav-tabs-link-active-bg: $new-tab-bg-color;
+// ---------- Tabs ----------
+
+
+// --------------------------------------------------
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+// --------------------------------------------------
+
+// ---------- new ThemeColor ----------
+$custom-colors: (
+    "royalgreen": $royalgreen
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$custom-colors-text: (
+    "royalgreen": $royalgreen
+);
+$theme-colors-text: map-merge($theme-colors-text, $custom-colors-text);
+
+$custom-colors-bg-subtle: (
+    "royalgreen": $royalgreen-bg-subtle
+);
+$theme-colors-bg-subtle: map-merge($theme-colors-bg-subtle, $custom-colors-bg-subtle);
+
+$custom-colors-border-subtle: (
+    "royalgreen": $royalgreen-border-subtle
+);
+$theme-colors-border-subtle: map-merge($theme-colors-border-subtle, $custom-colors-border-subtle);
+
+$custom-colors-text-dark: (
+    "royalgreen": $royalgreen
+);
+$theme-colors-text-dark: map-merge($theme-colors-text-dark, $custom-colors-text-dark);
+
+$custom-colors-bg-subtle-dark: (
+    "royalgreen": $royalgreen-bg-subtle-dark
+);
+$theme-colors-bg-subtle-dark: map-merge($theme-colors-bg-subtle-dark, $custom-colors-bg-subtle-dark);
+
+$custom-colors-border-subtle-dark: (
+    "royalgreen": $royalgreen-border-subtle-dark
+);
+$theme-colors-border-subtle-dark: map-merge($theme-colors-border-subtle-dark, $custom-colors-border-subtle-dark);
+
+$utilities-text-emphasis-colors: map-merge($utilities-text-emphasis-colors, ("royalgreen-emphasis": var(--#{$prefix}royalgreen-text-emphasis)));
+$utilities-bg-subtle:            map-merge($utilities-bg-subtle, ("royalgreen-subtle": var(--#{$prefix}royalgreen-bg-subtle)));
+$utilities-border-subtle:        map-merge($utilities-border-subtle, ("royalgreen-subtle": var(--#{$prefix}royalgreen-border-subtle)));
+
+$table-variants:                 map-merge($table-variants, ("royalgreen": shift-color($royalgreen, $table-bg-scale)));
+// ---------- new ThemeColor ----------
+
+// --------------------------------------------------
+@import "../node_modules/bootstrap/scss/utilities";
+// --------------------------------------------------
+
+// Something more
+
+// --------------------------------------------------
+@import "../node_modules/bootstrap/scss/bootstrap";
+// --------------------------------------------------
+
+// ---------- overwrite generated Colors ----------
+
+// ---------- new ThemeColor ----------
+/*
+.btn-royalgreen {
+    color: #fff; 
+}
+*/
+// ---------- new ThemeColor ----------

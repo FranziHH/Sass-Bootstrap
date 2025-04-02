@@ -1,0 +1,40 @@
+Bootstrap customize
+===================
+https://getbootstrap.com/docs/5.3/customize/options/
+
+npm install -g sass
+
+Bootstrap Template
+------------------
+https://stackoverflow.com/questions/79048994/subtle-and-emphasis-classes-on-bootstrap-5-3-new-color-theme-sass
+
+
+Install Bootstrap on Website
+----------------------------
+
+# outside from public folder (on root)
+npm init -y
+pm install --save-dev parcel
+
+npm install bootstrap@5.2.3
+
+Structure
+---------
+
+root
+    - src
+        - main.scss
+    - htdocs (public web folder)
+        - assets
+            - css
+                - style.css
+                - bootstrap.css
+            - js
+                - bootstrap.bundle.min.js
+
+
+Compile
+-------
+sass src/main.scss htdocs/assets/css/bootstrap.css --style compressed
+or
+make-css (uses batch file)

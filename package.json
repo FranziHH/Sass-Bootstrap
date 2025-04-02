@@ -1,0 +1,20 @@
+{
+  "name": "webservice",
+  "version": "1.0.0",
+  "description": "",
+  "source": "./htdocs/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel ./htdocs/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
