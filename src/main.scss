@@ -25,6 +25,7 @@ $new-tab-bg-color: #8DC63F;
 $own-primary: #e21cc1;
 $own-secondary: #dd9a0a;
 
+// --- first ---
 $own-primary-text-emphasis:   shade-color($own-primary, 60%) !default;
 $own-primary-text-emphasis-dark: tint-color($own-primary, 40%) !default;
 
@@ -34,7 +35,7 @@ $own-primary-bg-subtle-dark:     shade-color($own-primary, 80%) !default;
 $own-primary-border-subtle:   tint-color($own-primary, 60%) !default;
 $own-primary-border-subtle-dark: shade-color($own-primary, 40%) !default;
 
-
+// --- second ---
 $own-secondary-text-emphasis:   shade-color($own-secondary, 60%) !default;
 $own-secondary-text-emphasis-dark: tint-color($own-secondary, 40%) !default;
 
@@ -154,7 +155,7 @@ $table-variants: map-merge($table-variants, $custom-variants);
     color: #fff; 
 }
 
-.btn-own-secondar {
+.btn-own-secondary {
     color: #fff; 
 }
 */
